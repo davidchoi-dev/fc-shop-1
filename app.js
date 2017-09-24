@@ -25,6 +25,7 @@ db.once('open', function(){
 var connect = mongoose.connect('mongodb://127.0.0.1:27017/fastcampus', { useMongoClient: true });
 autoIncrement.initialize(connect);
 
+<<<<<<< HEAD
 var admin = require('./routes/admin');
 var accounts = require('./routes/accounts');
 var auth = require('./routes/auth');
@@ -34,6 +35,8 @@ var products = require('./routes/products');
 var cart = require('./routes/cart');
 var checkout = require('./routes/checkout');
 
+=======
+>>>>>>> parent of 9761c8d... 라우팅 추가
 var app = express();
 var port = 3000;
 
@@ -86,6 +89,7 @@ app.use(function(req, res, next) {
   app.locals.userData = req.user; //사용 정보를 보내고 싶으면 이와같이 셋팅
   next();
 });
+<<<<<<< HEAD
 
 // Routing
 app.use('/admin', admin);
@@ -96,6 +100,8 @@ app.use('/products', products);
 app.use('/cart', cart);
 app.use('/checkout', checkout);
 app.use('/', home);
+=======
+>>>>>>> parent of 9761c8d... 라우팅 추가
 
 var server = app.listen( port, function(){
     console.log('Express listening on port', port);
